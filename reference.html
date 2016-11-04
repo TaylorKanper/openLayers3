@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/ol.css" rel="stylesheet">
+    <script type="text/javascript" src="js/ol-debug.js"></script>
+</head>
+<body>
+<div id="map" style="width: 100%;height: 400px"></div>
+<script>
+    new ol.Map({
+        layers: [
+            new ol.layer.Tile({source: new ol.source.OSM()})
+        ],
+        view: new ol.View({
+            // 设置成都为地图中心
+            center: [104.06, 30.67],
+            // 指定投影使用EPSG:4326
+            projection: 'EPSG:3857',
+            zoom: 10
+        }),
+        target: 'map'
+    });
+</script>
+</body>
+</html>
